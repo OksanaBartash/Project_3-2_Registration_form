@@ -1,0 +1,271 @@
+/*Обнулення*/
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'BrixSans';
+	src: url('../fonts/BrixSansBold.otf') format('opentype');
+}
+
+
+
+/*==================================================================*/
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	line-height: 1;
+	color: #535353;
+	font-weight: 300;
+	font-family: 'BrixSans', sans-serif;
+	/*'Futura PT' sans-serif*/
+}
+
+/*--------------------------------------------------------*/
+.wrapper {
+	height: 100%;
+	overflow: hidden;
+	border: 0px solid red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #432d59;
+}
+
+
+
+/*--------------------------------------------------------*/
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 610px;
+	width: 1220px;
+	padding: 0px 5px;
+	margin: 0px auto;
+	border: 0px solid greenyellow;
+	overflow: hidden;
+	background-color: #432d59;
+}
+
+
+@media (max-width: 767px) {
+	.container {
+		width: none;
+	}
+}
+
+
+
+/*-----------Центральний контейнер:------------------*/
+
+.page {
+	display: flex;
+	overflow: hidden;
+	height: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	box-sizing: content-box;
+	border: 2px solid #432d59;
+	border-radius: 20px;
+	background-color: #efecf0;
+}
+
+
+
+.block__2columns {
+	overflow: hidden;
+}
+
+@media (min-width: 767px) {
+	.block__2columns {
+		display: flex;
+	}
+}
+
+
+/*-----------Лівий Блок:------------------*/
+
+.left__block {
+	height: 100%;
+	width: 40%;
+	border: 0px solid pink;
+}
+
+@media (max-width: 767px) {
+	.left__block {
+		width: 100%;
+	}
+}
+
+
+.link__item {
+	margin-top: calc(10px + (20 - 10) * ((100vw - 320px) / (2600 - 320)));
+	margin-left: calc(10px + (20 - 10) * ((100vw - 320px) / (2600 - 320)));
+
+}
+
+.text__title_left {
+	color: #432d59;
+	font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (2600 - 320)));
+	line-height: normal;
+}
+
+.center__text_item {
+
+	margin-top: calc(50px + (60 - 50) * ((100vw - 320px) / (2600 - 320)));
+}
+
+.text__center {
+	text-align: center;
+	font-size: calc(50px + (60 - 50) * ((100vw - 320px) / (2600 - 320)));
+	text-transform: uppercase;
+}
+
+.input__user_name {
+	margin-left: calc(30px + (60 - 30) * ((100vw - 320px) / (2600 - 320)));
+	margin-right: calc(30px + (60 - 30) * ((100vw - 320px) / (2600 - 320)));
+	margin-top: calc(40px + (50 - 40) * ((100vw - 320px) / (2600 - 320)));
+}
+
+.text__input {
+	font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (2600 - 320)));
+	padding: 10px;
+	text-transform: uppercase;
+	border-bottom: 2px solid grey;
+	width: 100%;
+	height: 40px;
+	background-color: #efecf0;
+
+}
+
+.input__password {
+	margin-left: calc(30px + (60 - 30) * ((100vw - 320px) / (2600 - 320)));
+	margin-right: calc(30px + (60 - 30) * ((100vw - 320px) / (2600 - 320)));
+	margin-top: calc(30px + (40 - 30) * ((100vw - 320px) / (2600 - 320)));
+}
+
+.button {
+	overflow: hidden;
+	margin-left: calc(30px + (100 - 30) * ((100vw - 320px) / (2600 - 320)));
+	margin-right: calc(30px + (100 - 30) * ((100vw - 320px) / (2600 - 320)));
+	margin-top: calc(100px + (110 - 100) * ((100vw - 320px) / (2600 - 320)));
+	border: 0px solid red;
+	border-radius: 10px;
+}
+
+.text__button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (2600 - 320)));
+	text-transform: uppercase;
+	color: white;
+	width: 100%;
+	height: 60px;
+	background-color: #432d59;
+}
+
+
+
+/*-----------Правий Блок:------------------*/
+
+.right__block {
+	width: 60%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	border: 0px solid green;
+}
+
+.foto__conteiner {
+	height: 100%;
+	overflow: hidden;
+	flex-wrap: wrap;
+	object-fit: cover;
+}
+
+
+.foto {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: relative;
+	flex-wrap: wrap;
+	filter: opacity(0.5) drop-shadow(0 0 rgb(243, 3, 143));
+	background-color: antiquewhite;
+}
+
+
+
+.text__title_right {
+	text-align: center;
+	position: absolute;
+	top: calc(150px + (200 - 150) * ((100vw - 320px) / (2600 - 320)));
+	left: 30%;
+	font-size: calc(70px + (100 - 70) * ((100vw - 320px) / (2600 - 320)));
+	text-transform: uppercase;
+	color: white;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.text__title_right {
+		left: 25%;
+	}
+}
+
+
+
+.text__right {
+	position: absolute;
+	margin-top: 10px;
+	top: calc(220px + (300 - 220) * ((100vw - 320px) / (2600 - 320)));
+	left: 15%;
+	font-size: calc(22px + (35 - 22) * ((100vw - 320px) / (2600 - 320)));
+	text-transform: uppercase;
+	color: white;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.text__right {
+		left: calc(10px + (260 - 100) * ((100vw - 320px) / (2600 - 320)));
+	}
+}
+
+
+
+.strips {
+	display: flex;
+	width: 150px;
+	height: 10px;
+	position: absolute;
+	top: 90%;
+	left: 40%;
+	border: 0px solid red;
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.strips {
+		left: 32%;
+	}
+}
+
+
+
+.one__strips {
+	display: flex;
+	margin-left: 3px;
+	width: 50px;
+	height: 8px;
+	background-color: white;
+	border: 0px solid green;
+}
